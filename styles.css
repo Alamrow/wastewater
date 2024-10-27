@@ -1,72 +1,60 @@
 body {
-    background-color: #9370db; /* Background color */
-    font-family: Arial, sans-serif; /* Font style */
-    text-align: center; /* Centered text */
+  background-color: #9370db; /* Change this to your desired color */
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
-h1 {
-    font-size: 32px; /* Title size */
-    margin-top: 20px; /* Margin on top */
-}
-
-h2 {
-    font-size: 24px; /* Subheading size */
-    font-weight: bold; /* Bold text */
+h1, h2 {
+  font-size: 24px;
+  font-weight: bold;
 }
 
 label {
-    font-size: 18px; /* Label size */
-    font-weight: bold; /* Bold labels */
+  font-size: 18px;
+  font-weight: bold;
 }
 
 input {
-    margin-bottom: 10px; /* Space below inputs */
-    padding: 5px; /* Padding inside inputs */
-    width: 200px; /* Input width */
+  margin-bottom: 10px;
 }
 
 button {
-    font-size: 16px; /* Button text size */
-    padding: 10px 20px; /* Button padding */
-    margin-top: 20px; /* Margin above button */
-    cursor: pointer; /* Pointer on hover */
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 20px;
 }
 
 .parameter {
-    margin-bottom: 20px; /* Space below each parameter */
-}
-
-p {
-    font-size: 16px; /* Paragraph size */
-    font-weight: bold; /* Bold paragraphs */
+  margin-bottom: 20px;
 }
 
 .results-header {
-    display: flex; /* Flexbox for header layout */
-    justify-content: space-between; /* Space between items */
-    font-weight: bold; /* Bold header text */
-    padding: 10px 0; /* Padding around header */
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
 }
 
 .results-list {
-    list-style-type: none; /* No bullets on list */
-    padding: 0; /* No padding */
+  list-style-type: none;
+  padding: 0;
 }
 
 .results-list li {
-    padding: 10px; /* Padding for list items */
-    border-bottom: 1px solid #ccc; /* Divider line */
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
 }
 
 .pass {
-    color: green; /* Green for passing results */
+  color: green;
 }
 
 .fail {
-    color: red; /* Red for failing results */
+  color: red;
 }
 
-footer {
-    margin-top: 20px; /* Space above footer */
-    font-size: 14px; /* Footer text size */
+p {
+  font-size: 16px;
+  font-weight: bold;
 }
