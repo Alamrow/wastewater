@@ -1,80 +1,59 @@
-
 body {
+    background-color: #9370db; /* Change this to your desired color */
     font-family: Arial, sans-serif;
-    background-color: #FFD700;
-    margin: 0;
-    padding: 20px;
+    text-align: center;
 }
 
 h1 {
-    color: #333;
+    font-size: 28px;
+    margin: 20px 0;
 }
 
-form {
-    background-color: #a33030;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+h2 {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 input {
-    width: 100%;
-    padding: 8px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
 }
 
 button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-.result {
+    font-size: 16px;
+    padding: 10px 20px;
     margin-top: 20px;
-    padding: 20px;
-    background-color: #9ed0df;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    white-space: pre-wrap; /* Maintains formatting for new lines */
 }
 
-a {
-    color: #0000EE; /* Default link color */
-    text-decoration: none;
+.parameter {
+    margin-bottom: 20px;
 }
 
-a:hover {
-    text-decoration: underline;
+p {
+    font-size: 16px;
+    font-weight: bold;
 }
 
-/* Footer styles */
-footer {
-    font-family: Arial, sans-serif;
-    color: #000000; /* Black color for text */
-    background-color: #FFD700; /* Gold background for contrast */
-    padding: 20px;
-    text-align: left;
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-footer a {
-    color: #FFD700; /* Ensure links also follow the theme color */
-    text-decoration: none;
+.results-list {
+    list-style-type: none;
+    padding: 0;
 }
 
-footer a:hover {
-    text-decoration: underline; /* Optional hover effect */
+.results-list li.pass {
+    color: green;
+}
+
+.results-list li.fail {
+    color: red;
 }
