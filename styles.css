@@ -1,59 +1,45 @@
 body {
-    background-color: #9370db; /* Change this to your desired color */
-    font-family: Arial, sans-serif;
-    text-align: center;
+  background-color: #9370db; /* Change this to your desired color */
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 h1 {
-    font-size: 28px;
-    margin: 20px 0;
-}
-
-h2 {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-label {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-input {
-    margin-bottom: 10px;
-}
-
-button {
-    font-size: 16px;
-    padding: 10px 20px;
-    margin-top: 20px;
-}
-
-.parameter {
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 16px;
-    font-weight: bold;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .results-header {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-    margin-bottom: 10px;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space items evenly */
+  font-weight: bold;
+  padding: 10px 20px;
 }
 
 .results-list {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
 }
 
-.results-list li.pass {
-    color: green;
+.results-list li {
+  display: flex; /* Use flexbox for list items */
+  justify-content: space-between; /* Space items evenly */
+  padding: 10px 20px; /* Add padding for spacing */
 }
 
-.results-list li.fail {
-    color: red;
+.pass {
+  background-color: #d4edda; /* Light green for pass */
+}
+
+.fail {
+  background-color: #f8d7da; /* Light red for fail */
+}
+
+span {
+  flex: 1; /* Each span takes equal space */
+}
+
+footer {
+  margin-top: 20px;
 }
