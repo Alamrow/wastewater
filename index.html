@@ -3,130 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blood Test Analyzer</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Water Project</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Blood Test Parameter Analyzer</h1>
-    
-    <form id="bloodTestForm">
-        <label for="glucose">Glucose (mg/dL):</label>
-        <input type="number" id="glucose" required><br><br>
-        
-        <label for="cholesterol">Cholesterol (mg/dL):</label>
-        <input type="number" id="cholesterol" required><br><br>
-        
-        <label for="triglycerides">Triglycerides (mg/dL):</label>
-        <input type="number" id="triglycerides" required><br><br>
-        
-        <label for="hdl">HDL (mg/dL):</label>
-        <input type="number" id="hdl" required><br><br>
-        
-        <label for="ldl">LDL (mg/dL):</label>
-        <input type="number" id="ldl" required><br><br>
-        
-        <label for="hemoglobin">Hemoglobin (g/dL):</label>
-        <input type="number" id="hemoglobin" required><br><br>
-        
-        <label for="whiteBloodCells">White Blood Cells (x10^9/L):</label>
-        <input type="number" id="whiteBloodCells" required><br><br>
-        
-        <label for="platelets">Platelets (x10^9/L):</label>
-        <input type="number" id="platelets" required><br><br>
-        
-        <label for="creatinine">Creatinine (mg/dL):</label>
-        <input type="number" id="creatinine" required><br><br>
-        
-        <label for="bilirubin">Bilirubin (mg/dL):</label>
-        <input type="number" id="bilirubin" required><br><br>
-        
-        <label for="alkPhos">Alkaline Phosphatase (U/L):</label>
-        <input type="number" id="alkPhos" required><br><br>
-        
-        <label for="ast">AST (U/L):</label>
-        <input type="number" id="ast" required><br><br>
-        
-        <label for="alt">ALT (U/L):</label>
-        <input type="number" id="alt" required><br><br>
-        
-        <label for="uricAcid">Uric Acid (mg/dL):</label>
-        <input type="number" id="uricAcid" required><br><br>
-        
-        <label for="calcium">Calcium (mg/dL):</label>
-        <input type="number" id="calcium" required><br><br>
-        
-        <label for="sodium">Sodium (mmol/L):</label>
-        <input type="number" id="sodium" required><br><br>
-
-        <button type="button" onclick="analyzeResults()">Analyze</button>
-    </form>
-
-    <script>
-    function analyzeResults() {
-        const parameters = {
-            glucose: document.getElementById("glucose").value,
-            cholesterol: document.getElementById("cholesterol").value,
-            triglycerides: document.getElementById("triglycerides").value,
-            hdl: document.getElementById("hdl").value,
-            ldl: document.getElementById("ldl").value,
-            hemoglobin: document.getElementById("hemoglobin").value,
-            whiteBloodCells: document.getElementById("whiteBloodCells").value,
-            platelets: document.getElementById("platelets").value,
-            creatinine: document.getElementById("creatinine").value,
-            bilirubin: document.getElementById("bilirubin").value,
-            alkPhos: document.getElementById("alkPhos").value,
-            ast: document.getElementById("ast").value,
-            alt: document.getElementById("alt").value,
-            uricAcid: document.getElementById("uricAcid").value,
-            calcium: document.getElementById("calcium").value,
-            sodium: document.getElementById("sodium").value,
-        };
-
-        let results = "";
-
-        const ranges = {
-            glucose: { low: 70, high: 140 },
-            cholesterol: { low: 125, high: 200 },
-            triglycerides: { low: 0, high: 150 },
-            hdl: { low: 40, high: 60 },
-            ldl: { low: 0, high: 100 },
-            hemoglobin: { low: 13.5, high: 17.5 },
-            whiteBloodCells: { low: 4, high: 11 },
-            platelets: { low: 150, high: 450 },
-            creatinine: { low: 0.6, high: 1.2 },
-            bilirubin: { low: 0.1, high: 1.2 },
-            alkPhos: { low: 44, high: 147 },
-            ast: { low: 10, high: 40 },
-            alt: { low: 7, high: 56 },
-            uricAcid: { low: 3.5, high: 7.2 },
-            calcium: { low: 8.5, high: 10.2 },
-            sodium: { low: 135, high: 145 },
-        };
-
-        for (const [key, value] of Object.entries(parameters)) {
-            if (value.trim() === "") {
-                // Skip empty fields
-                continue; 
-            }
-
-            const numericValue = parseFloat(value); // Convert to a number
-            if (numericValue < ranges[key].low) {
-                results += `<span style="color: red;">${key.charAt(0).toUpperCase() + key.slice(1)}: Under range</span><br>`;
-            } else if (numericValue > ranges[key].high) {
-                results += `<span style="color: red;">${key.charAt(0).toUpperCase() + key.slice(1)}: High range</span><br>`;
-            } else {
-                results += `<span style="color: green;">${key.charAt(0).toUpperCase() + key.slice(1)}: In range</span><br>`;
-            }
-        }
-
-        const encodedResults = encodeURIComponent(results);
-        window.location.href = `result.html?results=${encodedResults}`;
-    }
-</script>
-
-    
+    <header>
+        <h1>Welcome to the Future of Waste Water Management</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Parameter Analysis</h2>
+            <p>Note: The regulatory standards for these parameters are based on EPA guidelines.</p>
+            <div class="parameter">
+                <label for="bod">BOD (ppm):</label>
+                <input type="number" id="bod" placeholder="Enter BOD value">
+                <p id="bod-result"></p>
+            </div>
+            <div class="parameter">
+                <label for="cod">COD (ppm):</label>
+                <input type="number" id="cod" placeholder="Enter COD value">
+                <p id="cod-result"></p>
+            </div>
+            <div class="parameter">
+                <label for="tds">TDS (ppm):</label>
+                <input type="number" id="tds" placeholder="Enter TDS value">
+                <p id="tds-result"></p>
+            </div>
+            <div class="parameter">
+                <label for="nh4">NH4 (ppm):</label>
+                <input type="number" id="nh4" placeholder="Enter NH4 value">
+                <p id="nh4-result"></p>
+            </div>
+            <div class="parameter">
+                <label for="nh3">NH3 (ppm):</label>
+                <input type="number" id="nh3" placeholder="Enter NH3 value">
+                <p id="nh3-result"></p>
+            </div>
+            <div class="parameter">
+                <label for="cn">CN (ppm):</label>
+                <input type="number" id="cn" placeholder="Enter CN value">
+                <p id="cn-result"></p>
+            </div>
+            <div class="parameter">
+                <label for="fog">FOG (ppm):</label>
+                <input type="number" id="fog" placeholder="Enter FOG value">
+                <p id="fog-result"></p>
+            </div>
+            <div class="parameter">
+                <label for="hg">Hg (ppb):</label>
+                <input type="number" id="hg" placeholder="Enter Hg value">
+                <p id="hg-result"></p>
+            </div>
+            <div class="parameter">
+                <label for="ag">Ag (ppb):</label>
+                <input type="number" id="ag" placeholder="Enter Ag value">
+                <p id="ag-result"></p>
+            </div>
+            <div class="parameter">
+                <label for="fe">Fe (ppm):</label>
+                <input type="number" id="fe" placeholder="Enter Fe value">
+                <p id="fe-result"></p>
+            </div>
+            <div class="parameter">
+                <label for="mg">Mg (ppm):</label>
+                <input type="number" id="mg" placeholder="Enter Mg value">
+                <p id="mg-result"></p>
+            </div>
+            <div class="parameter">
+                <label for="cl">Cl (ppm):</label>
+                <input type="number" id="cl" placeholder="Enter Cl value">
+                <p id="cl-result"></p>
+            </div>
+            <div class="parameter">
+                <label for="f">F (ppm):</label>
+                <input type="number" id="f" placeholder="Enter F value">
+                <p id="f-result"></p>
+            </div>
+            <div class="parameter">
+                <label for="as">As (ppb):</label>
+                <input type="number" id="as" placeholder="Enter As value">
+                <p id="as-result"></p>
+            </div>
+            <div class="parameter">
+                <label for="se">Se (ppb):</label>
+                <input type="number" id="se" placeholder="Enter Se value">
+                <p id="se-result"></p>
+            </div>
+            <button type="button" onclick="analyzeResults()">Analyze</button>
+        </section>
+    </main>
     <footer>
-        <p>© 2024 Eng. Odeh Al Amrow  </p>
+        <p>© 2024 Eng. Odeh Al Amrow</p>
     </footer>
+    <script>
+        function analyzeResults() {
+            const parameters = {
+                bod: parseFloat(document.getElementById("bod").value),
+                cod: parseFloat(document.getElementById("cod").value),
+                tds: parseFloat(document.getElementById("tds").value),
+                nh4: parseFloat(document.getElementById("nh4").value),
+                nh3: parseFloat(document.getElementById("nh3").value),
+                cn: parseFloat(document.getElementById("cn").value),
+                fog: parseFloat(document.getElementById("fog").value),
+                hg: parseFloat(document.getElementById("hg").value),
+                ag: parseFloat(document.getElementById("ag").value),
+                fe: parseFloat(document.getElementById("fe").value),
+                mg: parseFloat(document.getElementById("mg").value),
+                cl: parseFloat(document.getElementById("cl").value),
+                f: parseFloat(document.getElementById("f").value),
+                as: parseFloat(document.getElementById("as").value),
+                se: parseFloat(document.getElementById("se").value),
+            };
+
+            const ranges = {
+                bod: { low: 0, high: 30 },
+                cod: { low: 0, high: 100 },
+                tds: { low: 0, high: 500 },
+                nh4: { low: 0, high: 5 },
+                nh3: { low: 0, high: 10 },
+                cn: { low: 0, high: 0.2 },
+                fog: { low: 0, high: 100 },
+                hg: { low: 0, high: 0.01 },
+                ag: { low: 0, high: 0.1 },
+                fe: { low: 0, high: 0.3 },
+                mg: { low: 0, high: 0.5 },
+                cl: { low: 0, high: 250 },
+                f: { low: 0, high: 1 },
+                as: { low: 0, high: 0.01 },
+                se: { low: 0, high: 0.02 },
+            };
+
+            let results = {};
+
+            for (const [key, value] of Object.entries(parameters)) {
+                if (!isNaN(value)) {
+                    results[key] = {
+                        value: value,
+                        within_range: value >= ranges[key].low && value <= ranges[key].high,
+                        range: `${ranges[key].low} - ${ranges[key].high}`,
+                    };
+                }
+            }
+
+            const encodedResults = encodeURIComponent(JSON.stringify(results));
+            window.location.href = `result.html?results=${encodedResults}`;
+        }
+    </script>
 </body>
 </html>
