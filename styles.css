@@ -29,11 +29,11 @@ h1 {
 }
 
 .pass {
-  background-color: #d4edda; /* Light green for pass */
+  background-color: #59e479; /* Light green for pass */
 }
 
 .fail {
-  background-color: #f8d7da; /* Light red for fail */
+  background-color: #b32a35; /* Light red for fail */
 }
 
 span {
