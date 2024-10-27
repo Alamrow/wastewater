@@ -1,0 +1,72 @@
+body {
+  background-color: #9370db; /* Change this to your desired color */
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  color: white;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.parameter {
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.results-header {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  background-color: #6a5acd;
+  color: white;
+  padding: 10px 0;
+}
+
+.results-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.results-list li {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.pass {
+  background-color: #98fb98; /* Light green for passing */
+}
+
+.fail {
+  background-color: #ffcccb; /* Light red for failing */
+}
+
+.result-value, .result-range {
+  font-weight: normal;
+}
