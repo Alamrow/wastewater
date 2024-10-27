@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Quality Analyzer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Welcome to the Future of Waste Water Management</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Parameter Analysis</h2>
+      <p>Note: The regulatory standards for these parameters are based on EPA guidelines.</p>
+      <div class="parameter">
+        <label for="bod">BOD (ppm):</label>
+        <input type="number" id="bod" placeholder="Enter BOD value">
+        <p id="bod-result"></p>
+      </div>
+      <div class="parameter">
+        <label for="cod">COD (ppm):</label>
+        <input type="number" id="cod" placeholder="Enter COD value">
+        <p id="cod-result"></p>
+      </div>
+      <div class="parameter">
+        <label for="tds">TDS (ppm):</label>
+        <input type="number" id="tds" placeholder="Enter TDS value">
+        <p id="tds-result"></p>
+      </div>
+      <div class="parameter">
+        <label for="nh4">NH4 (ppm):</label>
+        <input type="number" id="nh4" placeholder="Enter NH4 value">
+        <p id="nh4-result"></p>
+      </div>
+      <div class="parameter">
+        <label for="nh3">NH3 (ppm):</label>
+        <input type="number" id="nh3" placeholder="Enter NH3 value">
+        <p id="nh3-result"></p>
+      </div>
+      <div class="parameter">
+        <label for="cn">CN (ppm):</label>
+        <input type="number" id="cn" placeholder="Enter CN value">
+        <p id="cn-result"></p>
+      </div>
+      <div class="parameter">
+        <label for="fog">FOG (ppm):</label>
+        <input type="number" id="fog" placeholder="Enter FOG value">
+        <p id="fog-result"></p>
+      </div>
+      <div class="parameter">
+        <label for="hg">Hg (ppb):</label>
+        <input type="number" id="hg" placeholder="Enter Hg value">
+        <p id="hg-result"></p>
+      </div>
+      <div class="parameter">
+        <label for="ag">Ag (ppb):</label>
+        <input type="number" id="ag" placeholder="Enter Ag value">
+        <p id="ag-result"></p>
+      </div>
+      <div class="parameter">
+        <label for="fe">Fe (ppm):</label>
+        <input type="number" id="fe" placeholder="Enter Fe value">
+        <p id="fe-result"></p>
+      </div>
+      <div class="parameter">
+        <label for="mg">Mg (ppm):</label>
+        <input type="number" id="mg" placeholder="Enter Mg value">
+        <p id="mg-result"></p>
+      </div>
+      <div class="parameter">
+        <label for="cl">Cl (ppm):</label>
+        <input type="number" id="cl" placeholder="Enter Cl value">
+        <p id="cl-result"></p>
+      </div>
+      <div class="parameter">
+        <label for="f">F (ppm):</label>
+        <input type="number" id="f" placeholder="Enter F value">
+        <p id="f-result"></p>
+      </div>
+      <div class="parameter">
+        <label for="as">As (ppb):</label>
+        <input type="number" id="as" placeholder="Enter As value">
+        <p id="as-result"></p>
+      </div>
+      <div class="parameter">
+        <label for="se">Se (ppb):</label>
+        <input type="number" id="se" placeholder="Enter Se value">
+        <p id="se-result"></p>
+      </div>
+      <button id="analyze-btn" onclick="analyzeResults()">Analyze</button>
+    </section>
+  </main>
+  <footer>
+   <p>© 2024 Eng. Odeh Al Amrow</p>
+  </footer>
+</body>
+</html>
 
