@@ -1,72 +1,72 @@
 body {
-  background-color: #9370db; /* Change this to your desired color */
-  font-family: Arial, sans-serif;
-  text-align: center;
+    background-color: #9370db; /* Background color */
+    font-family: Arial, sans-serif; /* Font style */
+    text-align: center; /* Centered text */
 }
 
 h1 {
-  font-size: 36px;
-  color: white;
+    font-size: 32px; /* Title size */
+    margin-top: 20px; /* Margin on top */
 }
 
 h2 {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
+    font-size: 24px; /* Subheading size */
+    font-weight: bold; /* Bold text */
 }
 
 label {
-  font-size: 18px;
-  font-weight: bold;
+    font-size: 18px; /* Label size */
+    font-weight: bold; /* Bold labels */
 }
 
 input {
-  margin-bottom: 10px;
+    margin-bottom: 10px; /* Space below inputs */
+    padding: 5px; /* Padding inside inputs */
+    width: 200px; /* Input width */
 }
 
 button {
-  font-size: 16px;
-  padding: 10px 20px;
-  margin-top: 20px;
+    font-size: 16px; /* Button text size */
+    padding: 10px 20px; /* Button padding */
+    margin-top: 20px; /* Margin above button */
+    cursor: pointer; /* Pointer on hover */
 }
 
 .parameter {
-  margin-bottom: 20px;
+    margin-bottom: 20px; /* Space below each parameter */
 }
 
 p {
-  font-size: 16px;
-  font-weight: bold;
+    font-size: 16px; /* Paragraph size */
+    font-weight: bold; /* Bold paragraphs */
 }
 
 .results-header {
-  font-weight: bold;
-  display: flex;
-  justify-content: space-around;
-  background-color: #6a5acd;
-  color: white;
-  padding: 10px 0;
+    display: flex; /* Flexbox for header layout */
+    justify-content: space-between; /* Space between items */
+    font-weight: bold; /* Bold header text */
+    padding: 10px 0; /* Padding around header */
 }
 
 .results-list {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none; /* No bullets on list */
+    padding: 0; /* No padding */
 }
 
 .results-list li {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
+    padding: 10px; /* Padding for list items */
+    border-bottom: 1px solid #ccc; /* Divider line */
 }
 
 .pass {
-  background-color: #98fb98; /* Light green for passing */
+    color: green; /* Green for passing results */
 }
 
 .fail {
-  background-color: #ffcccb; /* Light red for failing */
+    color: red; /* Red for failing results */
 }
 
-.result-value, .result-range {
-  font-weight: normal;
+footer {
+    margin-top: 20px; /* Space above footer */
+    font-size: 14px; /* Footer text size */
 }
