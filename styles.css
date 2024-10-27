@@ -1,60 +1,80 @@
+
 body {
-  background-color: #9370db; /* Change this to your desired color */
-  font-family: Arial, sans-serif;
-  text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #FFD700;
+    margin: 0;
+    padding: 20px;
 }
 
-h1, h2 {
-  font-size: 24px;
-  font-weight: bold;
+h1 {
+    color: #333;
+}
+
+form {
+    background-color: #a33030;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 label {
-  font-size: 18px;
-  font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
 }
 
 input {
-  margin-bottom: 10px;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 button {
-  font-size: 16px;
-  padding: 10px 20px;
-  margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.parameter {
-  margin-bottom: 20px;
+button:hover {
+    background-color: #218838;
 }
 
-.results-header {
-  font-weight: bold;
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
+.result {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #9ed0df;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    white-space: pre-wrap; /* Maintains formatting for new lines */
 }
 
-.results-list {
-  list-style-type: none;
-  padding: 0;
+a {
+    color: #0000EE; /* Default link color */
+    text-decoration: none;
 }
 
-.results-list li {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
+a:hover {
+    text-decoration: underline;
 }
 
-.pass {
-  color: green;
+/* Footer styles */
+footer {
+    font-family: Arial, sans-serif;
+    color: #000000; /* Black color for text */
+    background-color: #FFD700; /* Gold background for contrast */
+    padding: 20px;
+    text-align: left;
 }
 
-.fail {
-  color: red;
+footer a {
+    color: #FFD700; /* Ensure links also follow the theme color */
+    text-decoration: none;
 }
 
-p {
-  font-size: 16px;
-  font-weight: bold;
+footer a:hover {
+    text-decoration: underline; /* Optional hover effect */
 }
