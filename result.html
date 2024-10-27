@@ -3,40 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blood Test Analysis Results</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Results Of Effluent Sample</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Blood Test Analysis Results</h1>
-    
-    <div id="results" class="result"></div>
-    
-    <script>
-        // Get the query parameters from the URL
-        const params = new URLSearchParams(window.location.search);
-        const results = params.get('results');
-
-        // Display the results on the page
-        if (results) {
-            const resultDiv = document.getElementById("results");
-            const resultLines = results.split('<br>'); // Split each line of the results
-
-            resultLines.forEach(line => {
-                if (line.trim() !== "") {
-                    const resultSpan = document.createElement('span');
-                    resultSpan.innerHTML = line; // Use innerHTML to maintain formatting
-                    resultDiv.appendChild(resultSpan);
-                    resultDiv.appendChild(document.createElement('br')); // Line break after each result
-                }
-            });
-        } else {
-            document.getElementById("results").innerText = "No results to display.";
-        }
-    </script>
-
-    <a href="index.html">Go Back</a>
+    <h1>Results Of Effluent Sample</h1>
+    <div class="results-header">
+        <span>Parameter</span>
+        <span>Sample Result</span>
+        <span>Range</span>
+    </div>
+    <ul class="results-list" id="resultsList"></ul>
+    <a href="index.html">Check Another</a>
     <footer>
-        <p>© 2024 Eng. Odeh Al Amrow </p>
+        <p>© 2024 Eng. Odeh Al Amrow</p>
     </footer>
+    <script>
+        function getResults() {
+            const params = new URLSearchParams(window.location.search);
+            const results = JSON.parse(decodeURIComponent(params.get('results')));
+
+            const resultsList = document.getElementById('resultsList');
+
+            for (const [param, details] of Object.entries(results)) {
+                const listItem = document.createElement('li');
+                listItem.className = details.within_range ? 'pass' : 'fail';
+                listItem.innerHTML = `
+                    <span class="param">${param.charAt(0).toUpperCase() + param.slice(1)}</span>
+                    <span class="result-value">${details.value || 'N/A'}</span>
+                    <span class="result-range">${details.range}</span>
+                `;
+                resultsList.appendChild(listItem);
+            }
+        }
+
+        window.onload = getResults;
+    </script>
 </body>
-</html>
+</html
